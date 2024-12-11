@@ -1,0 +1,7 @@
+*.DS_Store
+*.swp
+*.old
+
+.secrets
+ssh/id_rsa*
+ssh/known_hosts
