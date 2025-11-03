@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+languages=`echo "typescript python go java cpp bash nodejs tmux css html scala" | tr ' ' '\n'`
+tools=`echo "find sed awk tr grep curl wget kill ps git tar xargs jq ssh docker" | tr ' ' '\n'`
+
+
+selected=`printf "$languages\n$tools" | fzf`
+
+if [[ -z "$selected" ]]; then
+    exit 0
+fi
+
+read -p "Enter query: " query
+
+if printf "$languages" | grep -qs "$selected"; then
+    query=`echo $query | tr ' ' '+'`
+    tmux neww bash -c "curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
+else
+    tmux neww bash -c "curl cht.sh/$selected~$query & while [ : ]; do sleep 1; done"
+fi

@@ -20,6 +20,10 @@ in {
       source = ../../tmux/tmux.reset.conf;
     };
 
+    ".config/tmux-sessionizer/tmux-sessionizer.conf" = {
+      source = ../../tmux/tmux-sessionizer.conf;
+    };
+
     ".config/aerospace/aerospace.toml" = {
       source = ../../aerospace/aerospace.toml;
     };
@@ -105,6 +109,7 @@ in {
     font.name = "Fira Code";
     keybindings = {
       "§" = "send_text all #";
+      "£" = "send_text all #";
       "cmd+k" = "send_text all \\x0c";
     };
     settings = {

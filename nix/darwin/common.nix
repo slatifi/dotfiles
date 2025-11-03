@@ -34,6 +34,7 @@
       git
       htop
       lazygit
+      libllvm
       lua-language-server
       nil
       prettierd
@@ -76,6 +77,7 @@
       "python@3.12"
       "python@3.13"
       "python@3.9"
+      "qmk/qmk/qmk"
       "rust"
       "scala"
       {
@@ -85,12 +87,14 @@
       }
       "tfenv"
       "yarn"
+      "zstd"
     ];
 
     homebrew.taps = [
       "homebrew/cask"
       "FelixKratz/formulae"
       "nikitabobko/tap"
+      "qmk/qmk"
    ];
 
     homebrew.casks = [
@@ -98,8 +102,8 @@
       "arc"
       "bazecor"
       "displaylink"
-      "raycast"
       "font-sketchybar-app-font"
+      "raycast"
     ];
   };
 }
