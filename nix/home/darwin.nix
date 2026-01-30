@@ -43,4 +43,14 @@
   programs.ssh.extraConfig = ''
     UseKeychain yes
   '';
+
+  home.file = {
+    ".hushlogin" = {
+      text = "";
+    };
+
+    "Library/Application Support/tex-fmt/tex-fmt.toml" = {
+      source = ../../latex/tex-fmt.toml;
+    };
+  };
 }

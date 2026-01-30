@@ -46,10 +46,6 @@ in {
       recursive = true;
     };
 
-    ".hushlogin" = {
-      text = "";
-    };
-
     ".latexmkrc" = {
       source = ../../latex/.latexmkrc;
     };
