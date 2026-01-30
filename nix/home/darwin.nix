@@ -37,6 +37,7 @@
     DYLD_LIBRARY_PATH = "/usr/local/lib";
     XDG_CONFIG_HOME = "$HOME/.config";
     PNPM_HOME = "$HOME/.local/share/pnpm";
+    TMPDIR = "/tmp";
   };
 
   programs.ssh.extraConfig = ''

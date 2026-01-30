@@ -50,8 +50,14 @@ function icon_map() {
   "Default")
     icon_result=":default:"
     ;;
+  "Camunda Modeler")
+    icon_result=":draw_io:"
+    ;;
   "CleanMyMac X")
     icon_result=":desktop:"
+    ;;
+  "DataGrip")
+    icon_result=":datagrip:"
     ;;
   "Discord")
     icon_result=":discord:"
@@ -186,7 +192,7 @@ function icon_map() {
     icon_result=":parsec:"
     ;;
   "Preview")
-    icon_result=":pdf_old:"
+    icon_result=":preview:"
     ;;
   "Pi-hole Remote")
     icon_result=":pihole:"
@@ -217,6 +223,9 @@ function icon_map() {
     ;;
   "Safari")
     icon_result=":safari:"
+    ;;
+  "Skim")
+    icon_result=":pdf_old:"
     ;;
   "Skype")
     icon_result=":skype:"

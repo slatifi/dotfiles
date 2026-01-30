@@ -179,7 +179,7 @@ automatically-unhide-macos-hidden-apps = false
     cmd-alt-shift-s = 'move-node-to-workspace S'
     cmd-alt-shift-t = 'move-node-to-workspace T'
     cmd-alt-shift-u = 'move-node-to-workspace U'
-    cmd-alt-shift-v = 'move-node-to-workspace V'
+    # cmd-alt-shift-v = 'move-node-to-workspace V' # This command is used to paste without formatting on macOS
     cmd-alt-shift-w = 'move-node-to-workspace W'
     cmd-alt-shift-x = 'move-node-to-workspace X'
     cmd-alt-shift-y = 'move-node-to-workspace Y'
@@ -200,6 +200,7 @@ automatically-unhide-macos-hidden-apps = false
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
+    w = ['close', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']

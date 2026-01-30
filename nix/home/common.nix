@@ -49,6 +49,10 @@ in {
     ".hushlogin" = {
       text = "";
     };
+
+    ".latexmkrc" = {
+      source = ../../latex/.latexmkrc;
+    };
   };
 
 

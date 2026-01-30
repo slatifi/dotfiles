@@ -61,13 +61,15 @@
       "autopep8"
       "awscli"
       "borders"
+      "cocoapods"
       "gh"
+      "ghc"
       "gnupg"
       "imagemagick"
       "iperf"
       "luarocks"
+      "mariadb"
       "neovim"
-      "node"
       "nvm"
       "pipx"
       "pkgconf"
@@ -78,6 +80,7 @@
       "python@3.13"
       "python@3.9"
       "qmk/qmk/qmk"
+      "rclone"
       "rust"
       "scala"
       {
@@ -101,9 +104,12 @@
       "aerospace"
       "arc"
       "bazecor"
+      "camunda-modeler"
+      "datagrip"
       "displaylink"
       "font-sketchybar-app-font"
       "raycast"
+      "skim"
     ];
   };
 }
