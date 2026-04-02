@@ -25,13 +25,13 @@
 
     # System packages
     environment.systemPackages = with pkgs; [
-      bootdev-cli
       btop
       darwin.PowerManagement
       fd
       fzf
       gcc
       git
+      go
       htop
       lazygit
       libllvm
@@ -39,6 +39,7 @@
       nil
       prettierd
       ripgrep
+      sqlc
       sshpass
       tmux
       tree
@@ -67,6 +68,7 @@
       "gnupg"
       "imagemagick"
       "iperf"
+      "libiconv"
       "luarocks"
       "mariadb"
       "neovim"
@@ -81,7 +83,7 @@
       "python@3.9"
       "qmk/qmk/qmk"
       "rclone"
-      "rust"
+      "rustup"
       "scala"
       {
         name="sketchybar";
@@ -105,6 +107,7 @@
       "arc"
       "bazecor"
       "camunda-modeler"
+      "cyberduck"
       "datagrip"
       "displaylink"
       "font-sketchybar-app-font"

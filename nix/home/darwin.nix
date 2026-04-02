@@ -26,11 +26,15 @@
       "/Library/Frameworks/Python.framework/Versions/2.7/bin"
       "$HOME/Library/Python/3.9/bin"
       "$HOME/scripts"
+      "$GOPATH/bin"
+      "$HOME/.cargo/bin"
+      "$(brew --prefix rustup)/bin"
       "$HOME/.local/share/pnpm"
       "$HOME/.local/bin"
       "/usr/local/bin"
       "/opt/local/bin"
       "/opt/local/sbin"
+      "/usr/bin"
       "/usr/sbin"
       "$PATH"
     ];
@@ -38,6 +42,11 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     PNPM_HOME = "$HOME/.local/share/pnpm";
     TMPDIR = "/tmp";
+    GOPATH = "$HOME/.local/opt/go";
+    LIBRARY_PATH = builtins.concatStringsSep ":" [
+      "/opt/homebrew/opt/libiconv/lib"
+      "$LIBRARY_PATH"
+    ];
   };
 
   programs.ssh.extraConfig = ''
