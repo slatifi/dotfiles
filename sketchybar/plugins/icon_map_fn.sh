@@ -32,6 +32,9 @@ function icon_map() {
   "Bitwarden")
     icon_result=":bit_warden:"
     ;;
+  "Books")
+    icon_result=":book:"
+    ;;
   "Brave Browser")
     icon_result=":brave_browser:"
     ;;

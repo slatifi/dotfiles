@@ -58,7 +58,7 @@ in {
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    dotDir = ".config/zsh";
+    dotDir = config.xdg.configHome + "/zsh";
 
     oh-my-zsh = {
       enable = true;
@@ -91,14 +91,18 @@ in {
 
   programs.git = {
     enable = true;
-    userName= "Saif Latifi";
-    userEmail = "saif.latifi@gmail.com";
+    settings = {
+      user = {
+        name = "Saif Latifi";
+        email = " saif.latifi@gmail.com";
+      };
+      init.defaultBranch = "main";
+      core.editor = "vim";
+    };
     signing = {
       key = "2203751A68F82567";
       signByDefault = true;
     }; 
-    extraConfig.init.defaultBranch = "main";
-    extraConfig.core.editor = "vim";
   };
 
   # Kitty configuration
@@ -125,6 +129,16 @@ in {
   programs.ssh = {
     enable = true;
     includes = ["${homeDir}/.ssh/extra_config"];
-    addKeysToAgent = "yes";
+    enableDefaultConfig = false;
+    settings."*" = {
+      addKeysToAgent = "yes";
+    };
+  };
+
+  # Direnv configuration
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 }

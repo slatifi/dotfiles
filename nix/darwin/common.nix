@@ -26,7 +26,8 @@
     # System packages
     environment.systemPackages = with pkgs; [
       btop
-      darwin.PowerManagement
+      circumflex
+      # darwin.PowerManagement
       fd
       fzf
       gcc
@@ -68,7 +69,11 @@
       "gnupg"
       "imagemagick"
       "iperf"
+      "just"
+      "latexdiff"
       "libiconv"
+      "lld"
+      "llvm"
       "luarocks"
       "mariadb"
       "neovim"
@@ -76,12 +81,12 @@
       "pipx"
       "pkgconf"
       "pnpm"
+      "postgresql@15"
       "pygments"
       "python@3.10"
       "python@3.12"
       "python@3.13"
       "python@3.9"
-      "qmk/qmk/qmk"
       "rclone"
       "rustup"
       "scala"
@@ -95,11 +100,10 @@
       "zstd"
     ];
 
-    homebrew.taps = [
+    homebrew.taps = map (tapName: { name = tapName; trusted = true; }) [
       "homebrew/cask"
       "FelixKratz/formulae"
       "nikitabobko/tap"
-      "qmk/qmk"
    ];
 
     homebrew.casks = [
@@ -113,6 +117,7 @@
       "font-sketchybar-app-font"
       "raycast"
       "skim"
+      "tunnelblick"
     ];
   };
 }

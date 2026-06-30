@@ -23,17 +23,14 @@
     AWS_DEFAULT_REGION = "eu-west-2";
     PATH = builtins.concatStringsSep ":" [
       "/usr/local/texlive/2024/bin/universal-darwin"
-      "/Library/Frameworks/Python.framework/Versions/2.7/bin"
-      "$HOME/Library/Python/3.9/bin"
       "$HOME/scripts"
       "$GOPATH/bin"
       "$HOME/.cargo/bin"
       "$(brew --prefix rustup)/bin"
+      "$(brew --prefix postgresql@15)/bin"
       "$HOME/.local/share/pnpm"
       "$HOME/.local/bin"
       "/usr/local/bin"
-      "/opt/local/bin"
-      "/opt/local/sbin"
       "/usr/bin"
       "/usr/sbin"
       "$PATH"
@@ -61,5 +58,9 @@
     "Library/Application Support/tex-fmt/tex-fmt.toml" = {
       source = ../../latex/tex-fmt.toml;
     };
+  };
+
+  home.shellAliases = {
+    reload-env = "unset __HM_SESS_VARS_SOURCED __HM_ZSH_SESS_VARS_SOURCED && source /etc/profiles/per-user/slatifi/etc/profile.d/hm-session-vars.sh && exec zsh -l";
   };
 }
